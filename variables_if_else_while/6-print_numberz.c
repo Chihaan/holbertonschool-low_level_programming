@@ -1,5 +1,3 @@
-For information about GNU Emacs and the GNU system, type C-h C-a.
-File Edit Options Buffers Tools C Help
 #include <stdio.h>
 /**
  * main - Entry point
