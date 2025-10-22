@@ -1,0 +1,25 @@
+#include "main.h"
+
+int main(void)
+{
+	int i;
+	int j;
+	int k = i / 10;
+	int l = i % 10;
+	int m = j / 10;
+	int n = j % 10;
+
+	for (i = 0; i <= 23; i++)
+	{
+		for(j = 0; j <= 59; j++)
+		{
+		        _putchar(k + '0');
+			_putchar(l + '0');
+			_putchar(':');
+			_putchar(m + '0');
+			_putchar(n + '0');
+			_putchar('\n');
+		}
+	}
+	return (0);
+}
