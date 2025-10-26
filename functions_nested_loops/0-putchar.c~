@@ -1,7 +1,0 @@
-#include "_putchar.c"
-
-int main(void)
-{
-	_putchar('a');
-	return (0);
-}
