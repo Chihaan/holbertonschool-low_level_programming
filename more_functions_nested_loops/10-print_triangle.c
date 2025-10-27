@@ -1,25 +1,24 @@
 #include "main.h"
 /**
- * print_square - prints a square
+ * print_triangle - prints a triangle
  * @size : size of the square
  * Return: Always 0.
  */
-int main(void)
+void print_triangle(int size)
 {
-	int size = 50, i, j;
+	int i, j;
 
 	if (size <= 0)
 		_putchar('\n');
 	for (i = 1; i <= size; i++)
 	{
-		for (j = 1; j <= size; j ++)
+		for (j = 1; j <= size; j++)
 		{
 			if (j <= size - i)
 				_putchar(' ');
-			else if (j >= size - i)
-				_putchar('#');			
+			else
+				_putchar('#');
 		}
 	_putchar('\n');
-	}	
-	return (0);    
+	}
 }
