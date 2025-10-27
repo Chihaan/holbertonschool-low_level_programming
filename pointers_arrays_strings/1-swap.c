@@ -1,9 +1,13 @@
 #include "main.h"
 /**
- * reset_to_98 - check the code
- * 
+ * swap_int - check the code
+ * @a: value 1
+ * @b: value 2
  */
 void swap_int(int *a, int *b)
 {
-    
+	int tmp = *a;
+
+	*a = *b;
+	*b = tmp;
 }
