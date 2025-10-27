@@ -6,16 +6,17 @@
  */
 int main(void)
 {
-        int size = 98, i, j;
+	int n = 3, i, j;
 
-        for (i = 1; i <= size; i++)
-        {
-                for (j = 1; j <= size; j++)
-                {
-                        _putchar('#');
-                }
-            _putchar('\n');    
-        }
+    if (n <= 0)
         _putchar('\n');
+
+	for(i = 1; i <= n; i++)
+	{
+		for(j = 0; j < i; j++)
+            _putchar(' ');
+	    _putchar('\\');
+        _putchar('\n');	
+	}
     return (0);    
 }
