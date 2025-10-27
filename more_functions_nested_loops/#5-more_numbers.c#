@@ -1,0 +1,6 @@
+#include "main.h"
+/**
+ * more_numbers - write numbers x10
+ * @void: No return
+ * On error, -1 is returned, and errno is set appropriately.
+ */
