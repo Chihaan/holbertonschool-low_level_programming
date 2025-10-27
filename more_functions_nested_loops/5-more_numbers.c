@@ -16,7 +16,7 @@ void more_numbers(void)
 			while (j > 9 && j < 15)
 			{
 				_putchar(k + '0');
-				k++
+				k++;
 			}
 		}
 		_putchar('\n');
