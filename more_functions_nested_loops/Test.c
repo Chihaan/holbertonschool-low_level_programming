@@ -6,20 +6,16 @@
  */
 int main(void)
 {
-	int size = 50, i, j;
+	int i;
+	int n = 200;
 
-	if (size <= 0)
-		_putchar('\n');
-	for (i = 1; i <= size; i++)
+	for (i = 1; i <= n; i++)
 	{
-		for (j = 1; j <= size; j ++)
+		if (n >= 0)
 		{
-			if (j <= size - i)
-				_putchar(' ');
-			else if (j >= size - i)
-				_putchar('#');			
+			_putchar('_');
 		}
+	}
 	_putchar('\n');
-	}	
-	return (0);    
+	return (0);
 }
