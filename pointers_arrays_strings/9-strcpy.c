@@ -6,7 +6,7 @@
  *
  * Cette fonction copie la chaîne pointée par @src, y compris le caractère
  * nul de fin ('\0'), dans le buffer pointé par @dest.
- * Return: un pointeur vers la chaîne de destination.
+ * Return: *ogdest le pointeur vers le début de la chaîne de destination.
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -15,8 +15,8 @@ char *_strcpy(char *dest, char *src)
 	while (*src != '\0')
 	{
 		*dest = *src;
-		*src++;
-		*dest++;
+		src++;
+		dest++;
 	}
 	*dest = '\0';
 
