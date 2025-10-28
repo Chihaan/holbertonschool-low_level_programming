@@ -1,7 +1,13 @@
 #include "main.h"
 /**
- * reset_to_98 - check the code
- * 
+ * puts_half - affiche la deuxième moitié d'une chaîne de caractères
+ * @str: pointeur vers la chaîne à afficher
+ *
+ * Cette fonction calcule la longueur de la chaîne puis affiche
+ * uniquement la deuxième moitié :
+ * - si la longueur est paire, elle commence à len / 2 ;
+ * - si la longueur est impaire, elle commence à (len - 1) / 2 + 1.
+ * Un saut de ligne est ajouté à la fin.
  */
 void puts_half(char *str)
 {
