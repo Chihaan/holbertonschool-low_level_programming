@@ -10,7 +10,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *ogdest = *dest;
+	char *ogdest = dest;
 
 	while (*src != '\0')
 	{
@@ -20,6 +20,6 @@ char *_strcpy(char *dest, char *src)
 	}
 	*dest = '\0';
 
-	return (*ogdest);
+	return (ogdest);
 
 }
