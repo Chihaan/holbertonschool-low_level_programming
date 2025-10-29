@@ -29,7 +29,7 @@ char *cap_string(char *str)
 					*ptr = *ptr - 32;
 				}
 			}
-		}	
+		}
 		ptr++;
 	}
 	return (str);
