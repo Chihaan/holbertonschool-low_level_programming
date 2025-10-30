@@ -13,8 +13,7 @@ int _atoi(char *s)
 	{
 		if (*os >= '0' && *os <= '9')
 		{
-			r = r * 10;
-			r = r + *os - 48;
+			r = r * 10 + (*os - '0');
 		}
 		else if (*os == '-')
 			n = n * -1;
