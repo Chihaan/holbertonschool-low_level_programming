@@ -12,11 +12,25 @@ int _atoi(char *s)
 {
 	int r = 0, n = 1;
 	char *os = s;
+	int INT_MAX = 2147483647;
+	int INT_MIN = -2147483648;
 
 	while (*os != '\0')
 	{
 		if (*os >= '0' && *os <= '9')
 		{
+			int digit = *os - '0';
+
+			if (n == 1)
+			{
+				if (r > (INT_MAX - digit) / 10)
+					return (INT_MAX);
+			}
+			else
+			{
+				if (r > (-(INT_MIN + digit)) / 10)
+					return (INT_MIN);
+			}
 			r = r * 10 + (*os - '0');
 		}
 		else if (*os == '-')
