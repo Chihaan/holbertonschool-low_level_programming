@@ -13,7 +13,7 @@ int _atoi(char *s)
 	int r = 0, n = 1;
 	char *os = s;
 	int INT_MAX = 2147483647;
-	int INT_MIN = -2147483648;
+	int INT_MIN = (-INT_MAX - 1);
 
 	while (*os != '\0')
 	{
