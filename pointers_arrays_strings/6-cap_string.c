@@ -12,6 +12,7 @@ char *cap_string(char *str)
 {
 	char *ptr = str, sprt[13] = {',', ';', '.', '!', '?',
 		 '"', '(', ')', '{', '}', '\n', ' ', '\t'};
+	/*char *sep = ",;.!?\"(){}\n \t";*/
 	int i;
 
 	if (*ptr >= 'a' && *ptr <= 'z')
