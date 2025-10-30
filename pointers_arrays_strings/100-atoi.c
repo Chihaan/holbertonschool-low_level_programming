@@ -1,8 +1,12 @@
 #include "main.h"
 /**
- * int _atoi - check the code
- * @*s: 
- * return: sign + result
+ * _atoi - Convertit une chaîne en entier.
+ * @s: La chaîne à convertir.
+ *
+ * Parcourt la chaîne, gère les signes '-', récupère les chiffres
+ * et s’arrête dès qu’un caractère
+ * non numérique apparaît après un nombre.
+ * Return: L’entier obtenu avec le bon signe.
  */
 int _atoi(char *s)
 {
