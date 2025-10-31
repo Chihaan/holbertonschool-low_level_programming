@@ -10,34 +10,39 @@
  */
 int _atoi(char *s)
 {
-	int r = 0, n = 1;
-	char *os = s;
+	int res = 0, sign = 1;
+	char *sp = s;
+
+
 	int INT_MAX = 2147483647;
 	int INT_MIN = (-INT_MAX - 1);
 
-	while (*os != '\0')
-	{
-		if (*os >= '0' && *os <= '9')
-		{
-			int digit = *os - '0';
 
-			if (n == 1)
+	while (*sp != '\0')
+	{
+		if (*sp == '-')
+			sign = sign * -1;
+		else if (*sp >= '0' && *sp <= '9')
+		{
+			int digit = *sp - '0';
+
+			if (sign == 1)
 			{
-				if (r > (INT_MAX - digit) / 10)
+				if (res > (INT_MAX - digit) / 10)
 					return (INT_MAX);
+					res = res * 10 + digit;
 			}
 			else
 			{
-				if (r > (-(INT_MIN + digit)) / 10)
+				if (res > (-(INT_MIN + digit)) / 10)
 					return (INT_MIN);
+					res = res * 10 - digit;
 			}
-			r = r * 10 + (*os - '0');
+			res = res * 10 + (*sp - '0');
 		}
-		else if (*os == '-')
-			n = n * -1;
-		else if (r != 0)
+		else if (res != 0)
 			break;
-		os++;
+		sp++;
 	}
-	return (r * n);
+	return (res * sign);
 }
