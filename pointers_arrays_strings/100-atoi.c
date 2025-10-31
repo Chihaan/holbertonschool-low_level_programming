@@ -30,13 +30,13 @@ int _atoi(char *s)
 			{
 				if (res > (INT_MAX - digit) / 10)
 					return (INT_MAX);
-					res = res * 10 + digit;
+				res = res * 10 + digit;
 			}
 			else
 			{
 				if (res > (-(INT_MIN + digit)) / 10)
 					return (INT_MIN);
-					res = res * 10 - digit;
+				res = res * 10 - digit;
 			}
 			res = res * 10 + (*sp - '0');
 		}
