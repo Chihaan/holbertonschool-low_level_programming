@@ -38,11 +38,10 @@ int _atoi(char *s)
 					return (INT_MIN);
 				res = res * 10 - digit;
 			}
-			res = res * 10 + (*sp - '0');
 		}
 		else if (res != 0)
 			break;
 		sp++;
 	}
-	return (res * sign);
+	return (res);
 }
