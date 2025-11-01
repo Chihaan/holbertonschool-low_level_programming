@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-	long first = 1, second = 2, next = 0, result = 0;
+	long first = 1, second = 2, next = 0, result = 2;
 
 	while (next < 4000000)
 	{
