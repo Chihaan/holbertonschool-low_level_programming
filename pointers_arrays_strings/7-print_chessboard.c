@@ -1,9 +1,13 @@
 #include "main.h"
-
-int i, j;
-
+/**
+ * print_chessboard - affiche l’échiquier ligne par ligne
+ * @a: tableau 2D représentant les pièces
+ * Return: rien
+ */
 void print_chessboard(char (*a)[8])
 {
+	int i, j;
+
 	for (i = 0; i < 8; i++)
 	{
 		for (j = 0; j < 8; j++)
