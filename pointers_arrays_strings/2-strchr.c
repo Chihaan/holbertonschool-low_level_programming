@@ -18,5 +18,7 @@ char *_strchr(char *s, char c)
 		}
 		sptr++;
 	}
+	if (*sptr == '\0' && c == '\0')
+		return (sptr);
 	return (0);
 }
