@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _sqrt_check - trouve la racine carrée naturelle d'un nombre.
- * @n: le nombre dont on cherche la racine.
- * @i: tentative actuelle.
- * Return: la racine carrée naturelle ou -1 si elle n'existe pas.
+ * _is_prime - aide récursive pour tester la primalité
+ * @n: entier testé
+ * @i: diviseur candidat (impair)
+ * Return: 1 si n est premier, 0 sinon
  */
 int _is_prime(int n, int i)
 {
