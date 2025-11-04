@@ -1,15 +1,12 @@
 #include "main.h"
-
+/**
+ * _print_rev_recursion - imprime une chaîne à l'envers
+ * @s: pointeur vers la chaîne à afficher
+ * Retourne: rien (void)
+ */
 void _print_rev_recursion(char *s)
 {
-	char *start = s;
-	int i;
-
-	if (*s != '\0')
-		_print_rev_recursion(s + 1);
-
-	for (i = *s; i >= *start; i--)
-	{
-		_putchar(i);
-	}
+    if (*s == '\0') return;
+    _print_rev_recursion(s + 1);
+    _putchar(*s);
 }
