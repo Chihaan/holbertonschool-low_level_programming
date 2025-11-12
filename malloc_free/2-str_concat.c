@@ -7,7 +7,7 @@
  */
 int _strlen(char *s)
 {
-	unsigned int len = 0;
+	int len = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	ptr = malloc(_strlen(s1) + _strlen(s2) + 1);
-	
+
 	if (!ptr)
 		return (NULL);
 
