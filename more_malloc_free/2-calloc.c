@@ -3,7 +3,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	char *p;
 	unsigned int total = nmemb * size, i;
 
 
@@ -13,12 +13,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (total / nmemb != size)
 		return (NULL);
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	p = malloc(nmemb * size);
+	if (!p)
 		return (NULL);
-		
-	for (i = 0; i < total; i++)
-		ptr[i] = 0;
 
-	return (ptr);
+	for (i = 0; i < total; i++)
+		p[i] = 0;
+
+	return (p);
 }
