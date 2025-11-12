@@ -11,12 +11,12 @@ char *create_array(unsigned int size, char c)
 	char *tab;
 	unsigned int i;
 
-	if (size == 0)
+	if (!size)
 		return (NULL);
 
 	tab = malloc(size * sizeof(*tab));
 
-	if (tab == NULL)
+	if (!tab)
 		return (NULL);
 
 	for (i = 0; i < size; i++)

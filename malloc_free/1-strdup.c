@@ -24,13 +24,13 @@ char *_strdup(char *str)
 	unsigned int i, len;
 
 	if (!str)
-		return (0);
+		return (NULL);
 
 	len = _strlen(str);
 
 	dest = malloc((len + 1) * sizeof(char));
 	if (!dest)
-		return (0);
+		return (NULL);
 
 	for (i = 0; i < len; i++)
 		dest[i] = str[i];

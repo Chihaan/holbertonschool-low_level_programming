@@ -21,7 +21,7 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1, len2, i, j;
+	unsigned int i, j;
 	char *ptr;
 
 	if (!s1)
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s1[i]; i++)
 		ptr[i] = s1[i];
 	for (j = 0; s2[j]; j++)
-		ptr[len1 + j] = s2[j];
+		ptr[i + j] = s2[j];
 		
 	ptr[i + j] = '\0';
 
