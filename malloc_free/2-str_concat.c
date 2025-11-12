@@ -7,7 +7,7 @@
  */
 int _strlen(char *s)
 {
-	int len = 0;
+	unsigned int len = 0;
 
 	while (s[len])
 		len++;
@@ -21,7 +21,7 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j;
+	unsigned int i, j;
 	char *ptr;
 
 	if (!s1)
@@ -30,13 +30,11 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	ptr = malloc(_strlen(s1) + _strlen(s2) + 1);
-
 	if (!ptr)
 		return (NULL);
 
 	for (i = 0; s1[i]; i++)
 		ptr[i] = s1[i];
-
 	for (j = 0; s2[j]; j++)
 		ptr[i + j] = s2[j];
 		
