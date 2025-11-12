@@ -23,15 +23,15 @@ char *_strdup(char *str)
 	char *dest;
 	unsigned int i, len;
 
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 
 	len = _strlen(str);
 
 	dest = malloc((len + 1) * sizeof(char));
-
-	if (dest == NULL)
+	if (!dest)
 		return (NULL);
+
 	for (i = 0; i < len; i++)
 		dest[i] = str[i];
 
