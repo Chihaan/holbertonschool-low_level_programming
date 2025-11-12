@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - Concatène au plus n caractères
+ * _strncat - Concatène n caractères
  * de src à la fin de dest.
  * @dest: Chaîne de destination.
  * @src: Chaîne source.
