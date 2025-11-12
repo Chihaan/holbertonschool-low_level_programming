@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 /**
  * _strlen - retourne la longueur d'une chaîne de caractères
