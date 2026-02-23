@@ -4,18 +4,21 @@
 /**
  * print_last_digit - prints last digit
  * @n : the number used
- * Return: Always 0.
+ * Return: return n
  */
 int print_last_digit(int n)
 {
-	if (n < 0)
+	int last;
+
+	last = n % 10;
+	if (last < 0)
 	{
-		_putchar((-n % 10) + '0');
-		return (-n % 10);
+		_putchar(-last + '0');
+		return (-last);
 	}
 	else
 	{
-		_putchar((n % 10) + '0');
-		return (n % 10);
+		_putchar(last + '0');
+		return (last);
 	}
 }
