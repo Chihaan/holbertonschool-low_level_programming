@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	int c = 97;
+	char c = 'a';
 
-	while (c < 123)
+	while (c <= 'z')
 	{
 		putchar(c);
-		c = c + 1;
+		c ++;
 	}
 	putchar('\n');
 	return (0);
