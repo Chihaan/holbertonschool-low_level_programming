@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_line- Prints a libe of n length
+ * @n : length of the line
  *
  * Return: Nothing
  */
