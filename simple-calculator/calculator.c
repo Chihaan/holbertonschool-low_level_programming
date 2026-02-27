@@ -15,12 +15,12 @@ int main(void)
                 "0) Quitter \n");
         scanf("%d", &choice);
                 if (choice < 0 || choice > 4)
-                        printf("Veuillez entrer un nombre\n");
+                        printf("Invalid choice\n");
 
         switch(choice)
         {
                 case 0: 
-                        printf("Au Revoir !\n");
+                        printf("Bye !\n");
                         break;
                 case 1: 
                         printf("Entrez les deux nombres que vous voulez additionner: \n");
