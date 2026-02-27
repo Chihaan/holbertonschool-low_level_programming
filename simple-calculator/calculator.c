@@ -24,25 +24,33 @@ int main(void)
                         break;
                 case 1: 
                         printf("Entrez les deux nombres que vous voulez additionner: \n");
+                        printf("A :");
                         scanf("%d", &value1);
+                        printf("B :");
                         scanf("%d", &value2);
                         printf("Le resultat est: %d\n", value1 + value2);
                         break;
                 case 2:
                         printf("Entrez les deux nombres que vous voulez soustraire: \n");
+                        printf("A :");
                         scanf("%d", &value1);
+                        printf("B :");
                         scanf("%d", &value2);
                         printf("Le resultat est: %d\n", value1 - value2);
                         break;
                 case 3:
                         printf("Entrez les deux nombres que vous voulez multiplier: \n");
+                        printf("A :");
                         scanf("%d", &value1);
+                        printf("B :");
                         scanf("%d", &value2);
                         printf("Le resultat est: %d\n", value1 * value2);
                         break;
                 case 4:
                         printf("Entrez les deux nombres que vous voulez diviser: \n");
+                        printf("A :");
                         scanf("%d", &value1);
+                        printf("B :");
                         scanf("%d", &value2);
                         printf("Le resultat est: %d\n", value1 / value2);
                         break;
