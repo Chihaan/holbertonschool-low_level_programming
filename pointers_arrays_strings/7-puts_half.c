@@ -7,7 +7,7 @@
 void puts_half(char *str)
 {
 	char *counter = str;
-	int len = 0;
+	int len = 0, middle = 0;
 
 	while (*counter)
 	{
@@ -15,7 +15,7 @@ void puts_half(char *str)
 		len++;
 	}
 /* Calcul de la longueur de la chaîne */
-	int middle = (len + 1) / 2;
+	middle = (len + 1) / 2;
 /* Je gère les chaînes paire et impaires avec le len + 1 */
 	counter = str + middle;
 /* Je mets le pointeur counter au milieu de la chaîne */
