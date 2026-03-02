@@ -52,7 +52,7 @@ static unsigned long reduce_checksum(void)
 
 int main(void)
 {
-    unsigned long checksum;
+        unsigned long checksum;
 
         clock_t start_global, end_global, start_phase, end_phase;
         double total_sec, build_sec = 0.0, process_sec = 0.0, reduce_sec = 0.0;
@@ -60,21 +60,21 @@ int main(void)
         start_global = clock();
         start_phase = clock();
 
-    build_dataset();
+        build_dataset();
 
         end_phase = clock();
         build_sec = (double)(end_phase - start_phase) / CLOCKS_PER_SEC;
 
         start_phase = clock();
 
-    process_dataset();
+        process_dataset();
 
         end_phase = clock();
         process_sec = (double)(end_phase - start_phase) / CLOCKS_PER_SEC;           
 
         start_phase = clock();
 
-    checksum = reduce_checksum();
+        checksum = reduce_checksum();
 
         end_phase = clock();
         reduce_sec = (double)(end_phase - start_phase) / CLOCKS_PER_SEC;
@@ -82,8 +82,8 @@ int main(void)
         end_global = clock();
         total_sec = (double)(end_global - start_global) / CLOCKS_PER_SEC;        
 
-    if (checksum == 0ul)
-        printf("impossible\n");
+        if (checksum == 0ul)
+                printf("impossible\n");
 
         printf("TOTAL seconds: %.6f\n", total_sec);
         printf("BUILD_DATA seconds: %.6f\n", build_sec);
