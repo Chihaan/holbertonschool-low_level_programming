@@ -22,4 +22,5 @@ void puts_half(char *str)
 /* En changeant son adresse */
 	while (*counter)
 		_putchar(*counter++);
+	_putchar('\n');
 }
