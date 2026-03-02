@@ -7,11 +7,14 @@
 int _strlen(char *s)
 {
 	int count = 0;
+/*Je crée la variable de retour*/
 
-	while (*s != '\0')
+	while (*s)
+/*Tant que s n'est pas nul*/
 	{
 		count += 1;
 		s++;
+/*J'incrémente mon compteur et j'avance s*/
 	}
 	return (count);
 }

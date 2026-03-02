@@ -7,4 +7,5 @@
 void reset_to_98(int *n)
 {
 	*n = 98;
+/*En déréférencant (*) n je remplace sa valeur par 98*/
 }
