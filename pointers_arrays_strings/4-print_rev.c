@@ -4,8 +4,8 @@
  * @s : The string
  * Return: Nothing
  */
- void print_rev(char *s)
- {
+void print_rev(char *s)
+{
 	char *end = s;
 
 	while (*end)
@@ -14,4 +14,4 @@
 	while (end >= s)
 		_putchar(*end--);
 	_putchar('\n');
- }
+}
