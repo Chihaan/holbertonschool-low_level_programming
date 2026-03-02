@@ -2,9 +2,11 @@
 
 ## 1. Measurement Methodology
 I implemented a timing system using the standard library <time.h>. It provides the clock() function, which captures the number of processor clock ticks during the execution.
-The results are converted into seconds by dividing the values by CLOCKS_PER_SEC. This constant is very important to get a good precision.
+The results are converted into seconds by dividing the values by CLOCKS_PER_SEC.
 I used checkpoints (start and end variables) to measure the global time and the time for each specific phase.
 On my macOS machine, this method provides a theoretical precision down to the microsecond
+I used this command line to compile the program : 
+gcc -Wall (not all but important warnings) -Werror(Zero tolerance) -Wextra(another layer of warnings) -pedantic(ISO C) -std=gnu89(language) -Wno-long-long(exeption for long long in C89)
 
 ## 2. Observed Performance Differences
 I ran the program three times to see how the values change. Here is the data:
