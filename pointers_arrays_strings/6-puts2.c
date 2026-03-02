@@ -9,7 +9,13 @@ void puts2(char *str)
 	while (*str)
 	{
 		_putchar(*str);
-		str += 2;
+		str++;
+
+		if (*str == '\0')
+			break;
+		else
+			str++;
 	}
 	_putchar('\n');
+
 }
