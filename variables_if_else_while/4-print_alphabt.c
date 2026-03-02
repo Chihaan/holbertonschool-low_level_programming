@@ -13,7 +13,6 @@ char c = 'a';
 		if (c != 'q' && c != 'e')
 			putchar(c);
 		c++;
-
 	}
 	putchar('\n');
 	return (0);

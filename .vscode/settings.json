@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 8,
+    "editor.comments.insertSpace": true,
+    "editor.insertSpaces": false,
+"editor.detectIndentation": false,
+"editor.fontSize": 16
+}
