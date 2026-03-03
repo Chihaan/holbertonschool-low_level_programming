@@ -14,13 +14,19 @@ char *_strncat(char *dest, char *src, int n)
 	while (*dest)
 		dest++;
 /* J'emmene le pointeur dest a la fin */
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n && *src != '\0'; i++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+/* Je copies que si il y'a des caractères dans src */
+/* Et que i est inférieur a n */
+		{
+			*dest = *src;
+			dest++;
+			src++;
+		}
 	}
 /* Je remplace NULL par le premier charactere de src */
+/* Je boucle n bytes fois */
 	*dest = '\0';
 /* Je rajoute NULL a la fin de la chaîne */
+	return (ptr);
 }
