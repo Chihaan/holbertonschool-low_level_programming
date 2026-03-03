@@ -11,12 +11,14 @@ char *_strcat(char *dest, char *src)
 
 	while (*dest)
 		dest++;
-
+/* J'emmene le pointeur dest a la fin */
 	while (*src)
 	{
 		*dest = *src;
 		dest++;
 		src++;
 	}
+/* Je remplace NULL par le premier charactere de src */
 	*dest = '\0';
+/* Je rajoute NULL a la fin de la chaîne */
 }
