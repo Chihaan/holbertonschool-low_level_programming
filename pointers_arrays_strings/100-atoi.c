@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - check the code 
- *
- * Return: Always 0.
+ * _atoi - Change a char into int
+ * @s : the string
+ * Return: Char into int
  */
 int _atoi(char *s)
 {
