@@ -23,6 +23,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (*accept == '\0')
 			return (count);
+/* Si je sors du while et que accept est sur \0 */
+/* C'est qu'il a pas trouvé de correspondance */
 		s++;
 		accept = reset;
 	}
