@@ -8,7 +8,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	unsigned int count = 0;
+	int count = 0;
 	char *ptr = dest;
 	
 	while (*src != '\0' && count < n)
