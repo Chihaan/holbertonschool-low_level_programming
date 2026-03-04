@@ -15,8 +15,10 @@ char *leet(char *s)
 /* Tant que la chaine n'est pas finie */
 		{
 			if (*s == letter[i])
+			{
 				*s = leet[i];
 /* Si l'un des char est dans ma liste je le remplace */
+			}
 			i++;
 		}
 		s++;
