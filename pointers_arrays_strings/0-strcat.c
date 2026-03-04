@@ -11,7 +11,8 @@ char *_strcat(char *dest, char *src)
 
 	while (*dest)
 		dest++;
-/* J'emmene le pointeur dest a la fin */
+	dest++;
+/* J'emmene le pointeur dest a la fin + 1 */
 	while (*src)
 	{
 		*dest = *src;
