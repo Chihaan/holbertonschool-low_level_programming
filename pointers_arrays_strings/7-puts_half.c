@@ -16,7 +16,7 @@ void puts_half(char *str)
 	}
 /* Calcul de la longueur de la chaîne */
 	middle = (len + 1) / 2;
-/* Je gère les chaînes paire et impaires avec le len + 1 */
+/* Je gère les chaînes pairs et impairs avec le len + 1 */
 	counter = str + middle;
 /* Je mets le pointeur counter au milieu de la chaîne */
 /* En changeant son adresse */
