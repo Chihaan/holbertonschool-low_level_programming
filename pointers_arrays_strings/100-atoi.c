@@ -6,7 +6,8 @@
  */
 int _atoi(char *s)
 {
-	int result = 0, sign = 1, find = 0;
+	int sign = 1, find = 0;
+	unsigned long result = 0;
 
 	while (*s)
 	{
