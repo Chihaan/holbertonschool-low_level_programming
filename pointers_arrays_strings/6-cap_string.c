@@ -13,6 +13,8 @@ char *cap_string(char *s)
 	{
 		if (*s >= 'A' && *s <= 'Z' && find == 0)
 			find = 1;
+		if (*s >= '0' && *s <= '9' && find == 0)
+			find = 1;
 		if (*s >= 'a' && *s <= 'z' && find == 0)
 		{
 			*s -= 32;
