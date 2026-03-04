@@ -14,6 +14,7 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 	if (*s == c)
+/* Je regarde si le char \0 était celui recherché */
 		return (s);
 	return (0);
 }
