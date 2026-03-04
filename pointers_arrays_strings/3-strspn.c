@@ -1,7 +1,30 @@
 #include "main.h"
 /**
- * main - check the code 
- *
- * Return: Always 0.
+ * _strspn - Gets the length of a prefix substring.
+ * @s : The string
+ * @accept : The characters tested
+ * Return: count of consecutive
  */
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int count = 0;
+	char *reset = accept;
 
+	while (*s)
+	{
+		while (*accept)
+		{
+			if (*s == *accept)
+			{
+				count += 1;
+				break;
+			}
+			accept++;
+		}
+		if (*accept == '\0')
+			return (count);
+		s++;
+		accept = reset;
+	}
+	return (count);
+}
