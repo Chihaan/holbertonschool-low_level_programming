@@ -7,19 +7,19 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char *ptr = dest;
+	char *ptr = dest, *source = src;
 
 	while (*dest)
 		dest++;
-	dest++;
 /* J'emmene le pointeur dest a la fin + 1 */
-	while (*src)
+	while (*source)
 	{
-		*dest = *src;
+		*dest = *source;
 		dest++;
-		src++;
+		source++;
 	}
 /* Je remplace NULL par le premier charactere de src */
 	*dest = '\0';
 /* Je rajoute NULL a la fin de la chaîne */
+	return (ptr);
 }
