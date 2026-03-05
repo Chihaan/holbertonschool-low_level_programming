@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * main - check the code 
+ * print_chessboard - Print a chessboard
+ * @a : the array
  *
  * Return: Always 0.
  */
