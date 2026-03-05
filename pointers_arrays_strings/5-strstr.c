@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * *_strstr - Finds the first occurrence of the substring
- * @haystack : The source file 
+ * @haystack : The source file
  * @needle : The substring
  * Return: A pointer to the first occurence
  */
@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 				break;
 		}
 		if (needle[j] == '\0')
-			return(haystack + i);
+			return (haystack + i);
 	}
-	return (haystack);
+	return (0);
 }
