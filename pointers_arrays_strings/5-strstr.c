@@ -10,27 +10,32 @@ char *_strstr(char *haystack, char *needle)
 	char *h = haystack, *n = needle;
 	int count = 0, needle_len = 0;
 
-	while (*needle)
+	while (*needle++)
 		needle_len += 1;
+	needle = n;
 
 	while (*haystack)
 	{
 		if (*haystack == *needle)
 		{
+			count = 1;
 			h = haystack;
 			while (*needle)
 			{
 				if (*needle != *haystack)
-					needle = h;
+				{
+					needle = n;
+					count = 0;
 					break;
+				}
 				needle++;
 				haystack++;
 				count += 1;
 				if (count == needle_len)
 					return (h);
 			}
-			haystack++;
 		}
+		haystack++;
 	}
 	return (0);
 }
