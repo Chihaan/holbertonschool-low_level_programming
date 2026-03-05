@@ -1,40 +1,26 @@
 #include "main.h"
 /**
  * *_strstr - Finds the first occurrence of the substring
- * @haystack : The source file
+ * @haystack : The source file 
  * @needle : The substring
  * Return: A pointer to the first occurence
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *n = needle;
-	int count = 0, needle_len = 0;
+	int i, j;
 
-	while (*needle++)
-		needle_len += 1;
-	needle = n;
+	if (*needle == '\0')
+		return (haystack);
 
-	while (*haystack)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if (*haystack == *needle)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			count = 1;
-			while (*needle)
-			{
-				if (*needle != *haystack)
-				{
-					needle = n;
-					count = 0;
-					break;
-				}
-				needle++;
-				haystack++;
-				count += 1;
-				if (count == needle_len)
-					return (n);
-			}
+			if (haystack[i + j] != needle[j])
+				break;
 		}
-		haystack++;
+		if (needle[j] == '\0')
+			return(haystack + i);
 	}
 	return (0);
 }
