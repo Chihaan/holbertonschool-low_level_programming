@@ -8,7 +8,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned int sum = 0, sum2 = 0;
+	long sum = 0, sum2 = 0;
 	int i;
 
 	for (i = 0; i < size; i++)
@@ -19,5 +19,5 @@ void print_diagsums(int *a, int size)
 			sum2 += a[i * size + (size - 1 - i)];
 /* Anti diagonale */
 	}
-	printf("%d, %d\n", sum, sum2);
+	printf("%ld, %ld\n", sum, sum2);
 }
