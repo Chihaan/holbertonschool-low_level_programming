@@ -8,16 +8,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-	long sum = 0, sum2 = 0;
+	int sum = 0, sum2 = 0;
 	int i;
 
 	for (i = 0; i < size; i++)
 /* Je boucle dans le tableau 1d */
 	{
-			sum += a[i * size + i];
+		sum += a[i * size + i];
 /* Premiere diagonale */
-			sum2 += a[i * size + (size - 1 - i)];
+		sum2 += a[i * size + (size - 1 - i)];
 /* Anti diagonale */
 	}
-	printf("%ld, %ld\n", sum, sum2);
+	printf("%d, %d\n", sum, sum2);
 }
