@@ -8,7 +8,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, sum = 0, sum2 = 0;
+	unsigned int sum = 0, sum2 = 0;
+	int i;
 
 	for (i = 0; i < size; i++)
 /* Je boucle dans le tableau 1d */
