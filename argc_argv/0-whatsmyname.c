@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #define UNUSED(argc) (int)(argc)
 /**
  * main - Entry of program
