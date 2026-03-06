@@ -18,5 +18,5 @@ void print_diagsums(int *a, int size)
 			sum2 += a[i * size + (size - 1 - i)];
 /* Anti diagonale */
 	}
-	printf("%d, %d\n ", sum, sum2);
+	printf("%d, %d\n", sum, sum2);
 }
