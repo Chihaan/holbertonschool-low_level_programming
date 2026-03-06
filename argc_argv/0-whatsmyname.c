@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#define UNUSED(argc) (int)(argc)
 /**
  * main - Entry of program
  * @argc : Argument count
@@ -9,6 +8,6 @@
  */
 int main(int argc, char *argv[])
 {
-	UNUSED(argc);
+	(void)argc;
 	printf("%s\n", *argv);
 }
