@@ -1,18 +1,32 @@
 #include <stdio.h>
-#include "dog.h"
+#include <stdlib.h>
+#include "3-calc.h"
 
 /**
  * main - check the code
- *
+ * @argc : Argument count
+ * @argv : Argument value
  * Return: Always 0.
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-    dog_t my_dog;
+	int value1, value2 = 0, result;
+	int (*f)(int, int);
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	value1 = atoi(argv[1]);
+	value2 = atoi(argv[3]);
+
+	f = get_op_func(argv[2]);
+
+	result = f(value1, value2);
+
+	printf("%d\n", result);
+
+	return (0);
 }

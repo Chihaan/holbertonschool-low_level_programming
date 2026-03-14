@@ -1,5 +1,27 @@
 #include <stdio.h>
-#include "dog.h"
+#include "function_pointers.h"
+
+/**
+ * print_elem - prints an integer
+ * @elem: the integer to print
+ *
+ * Return: Nothing.
+ */
+void print_elem(int elem)
+{
+    printf("%d\n", elem);
+}
+
+/**
+ * print_elem_hex - prints an integer, in hexadecimal
+ * @elem: the integer to print
+ *
+ * Return: Nothing.
+ */
+void print_elem_hex(int elem)
+{
+    printf("0x%x\n", elem);
+}
 
 /**
  * main - check the code
@@ -8,9 +30,9 @@
  */
 int main(void)
 {
-    struct dog my_dog;
+    int array[5] = {0, 98, 402, 1024, 4096};
 
-    init_dog(&my_dog, "Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
+    array_iterator(array, 5, &print_elem);
+    array_iterator(array, 5, &print_elem_hex);
     return (0);
 }
