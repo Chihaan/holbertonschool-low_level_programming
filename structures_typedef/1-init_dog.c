@@ -3,14 +3,16 @@
 #include <stdio.h>
 /**
  * init_dog - That initialize a variable of type struct dog
- * @d : the structure
+ * @d: the structure
  * @name : the name
- * @age : the age
- * @owner : the owner
+ * @age: the age
+ * @owner: the owner
  * Return: Nothing
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d == NULL)
+		return;
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
