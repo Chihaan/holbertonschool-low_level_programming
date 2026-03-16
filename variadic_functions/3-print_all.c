@@ -44,14 +44,13 @@ void print_string(va_list ap)
 		printf("%s", str);
 }
 /**
- * print_name - Prints the name as is
- * @name : The name
- * @f : The functions
+ * print_all - Prints all the formats
+ * @format: String of formats
  * Return: Nothing
  */
 void print_all(const char * const format, ...)
 {
-	forms fs [] = {
+	forms fs[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
@@ -63,10 +62,10 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-	while(format[i])
+	while (format[i])
 	{
 		j = 0;
-		while(fs[j].format != NULL)
+		while (fs[j].format != NULL)
 		{
 			if (format[i] == fs[j].format[0])
 			{
@@ -78,7 +77,7 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		i++;	
+		i++;
 	}
 	va_end(ap);
 	printf("\n");
