@@ -10,7 +10,7 @@
 typedef struct formats
 {
 	char *formats;
-	void (*functions)(va_list);
+	void (*functions)(va_list *);
 } forms;
 
 int sum_them_all(const unsigned int n, ...);

@@ -7,36 +7,36 @@
  * @ap : The argument
  * Return: Nothing
  */
-void print_char(va_list ap)
+void print_char(va_list *ap)
 {
-	printf("%c", (char)va_arg(ap, int));
+	printf("%c", (char)va_arg(*ap, int));
 }
 /**
  * print_integer - Prints an integer
  * @ap : The argument
  * Return: Nothing
  */
-void print_integer(va_list ap)
+void print_integer(va_list *ap)
 {
-	printf("%d", va_arg(ap, int));
+	printf("%d", va_arg(*ap, int));
 }
 /**
  * print_float - Prints a float
  * @ap : The argument
  * Return: Nothing
  */
-void print_float(va_list ap)
+void print_float(va_list *ap)
 {
-	printf("%f", (float)va_arg(ap, double));
+	printf("%f", (float)va_arg(*ap, double));
 }
 /**
  * print_string - Prints a string
  * @ap : The argument
  * Return: Nothing
  */
-void print_string(va_list ap)
+void print_string(va_list *ap)
 {
-	char *str = va_arg(ap, char *);
+	char *str = va_arg(*ap, char *);
 
 	if (str == NULL)
 	{
@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == fs[j].formats[0])
 			{
 				printf("%s", seps[sep]);
-				fs[j].functions(ap);
+				fs[j].functions(&ap);
 				sep = 1;
 				break;
 			}
