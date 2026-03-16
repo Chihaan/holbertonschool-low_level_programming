@@ -56,19 +56,19 @@ void print_all(const char * const format, ...)
 	};
 	int i = 0, j = 0, sep = 0;
 	va_list ap;
+	char *seps[] = {"", ", "};
 
 	va_start(ap, format);
 
 	while (format[i])
 	{
 		j = 0;
-		while (fs[j].format != NULL)
+		while (fs[j].formats != NULL)
 		{
-			if (format[i] == fs[j].format[0])
+			if (format[i] == fs[j].formats[0])
 			{
-				if (sep != 0)
-					printf(", ");
-				fs[j].func(ap);
+				printf("%s", seps[sep]);
+				fs[j].functions(ap);
 				sep = 1;
 				break;
 			}
