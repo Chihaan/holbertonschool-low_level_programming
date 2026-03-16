@@ -38,11 +38,6 @@ void print_string(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
 	printf("%s", str);
 }
 /**
@@ -59,7 +54,7 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	int i = 0, j = 0, sep = -1;
+	int i = 0, j = 0, sep = 0;
 	va_list ap;
 
 	va_start(ap, format);
@@ -71,8 +66,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == fs[j].format[0])
 			{
-				sep++ && printf(", ");
+				if (sep != 0)
+					printf(", ");
 				fs[j].func(ap);
+				sep = 1;
 				break;
 			}
 			j++;
