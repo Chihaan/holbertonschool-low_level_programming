@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
 	value1 = atoi(argv[1]);
 	value2 = atoi(argv[3]);
 
