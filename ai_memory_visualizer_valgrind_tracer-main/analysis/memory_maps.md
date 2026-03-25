@@ -3,22 +3,24 @@
 ## 1. Stack vs Heap
 
 ### Stack
+
 The stack is memory used within the scope of a function.
 It is managed automatically — variables are created when the function
 is called and destroyed when it returns.
 The stack is fast but limited in size.
 
 ### Heap
+
 The heap is memory allocated dynamically at runtime using malloc().
 It persists beyond function calls and is accessible anywhere in the program.
 It must be explicitly freed with free(), otherwise it causes a memory leak.
 
-|		| Stack				| Heap					|
-|		|				|					|
-| Management 	| Automatic 			| Manual (malloc/free) 			|
-| Lifetime 	| Tied to function scope 	| Until free() is called 		|
-| Speed 	| Fast 				| Slower 				|
-| Risk 		| Dangling pointer		| Memory leak, use-after-free		|
+|		| Stack				| Heap							|
+|		|				|							|
+| Management 	| Automatic 			| Manual (malloc/free) 					|
+| Lifetime 	| Tied to function scope 	| Until free() is called 				|
+| Speed 	| Fast 				| Slower 						|
+| Risk 		| Dangling pointer		| Memory leak, use-after-free, Dangling pointer		|
 
 ## 2. stack_example — Stack frames and recursion
 
@@ -56,6 +58,16 @@ Memory freed :
 - alice      ✓ freed by person_free_partial()
 - alice->name ✗ never freed → MEMORY LEAK (16 bytes)
 
+leaks Report Version: 4.0, multi-line stacks
+Process 68937: 190 nodes malloced for 16 KB
+Process 68937: 1 leak for 16 total leaked bytes.
+
+STACK OF 1 INSTANCE OF 'ROOT LEAK: <malloc in person_new>':
+3   dyld                                  0x1893f9d54 start + 7184
+2   heap_example                          0x102094494 main + 52  heap_example.c:51
+1   heap_example                          0x102094604 person_new + 112  heap_example.c:21
+0   libsystem_malloc.dylib                0x1895eff44 _malloc_zone_malloc_instrumented_or_legacy + 152 
+
 person_free_partial() only frees the Person struct,
 not the name field, causing alice->name to be leaked.
 
@@ -79,19 +91,20 @@ Both detected by AddressSanitizer :
 
 ## 5. crash_example — NULL dereference and segmentation fault
 
-allocate_numbers() returns NULL when n=0.
-The program then tries to write to address 0x0 which is protected by the OS.
+allocate_numbers() returns NULL when n=0. The program then tries to write 
+to address 0x0, which is an unmapped virtual address (guard page). 
+The access triggers a page fault, and the kernel sends SIGSEGV to the process.
 
 Heap layout :
 nums = NULL (0x0)  ← no allocation was made
 
 Bug identified :
 nums = allocate_numbers(0)  → returns NULL
-nums[0] = 42               → tries to write at address 0x0
+nums[0] = 42                → tries to write at address 0x0
 
 Result :
-The OS detects the invalid memory access and kills the program.
-→ Segmentation fault
+
+Segmentation fault (SIGSEGV)
 
 ## 6. AI Error Documentation
 
