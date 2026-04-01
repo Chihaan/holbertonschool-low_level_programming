@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
- * *create_node - Create a node for hashtable
+ * *add_node - Create a node for hashtable
  * @key: the key
  * @value: the value
  * Return: Pointer to the node
