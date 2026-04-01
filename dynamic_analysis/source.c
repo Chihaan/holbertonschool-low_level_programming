@@ -117,7 +117,7 @@ static int validate(unsigned int user_pin)
     } else {
         tgt += (k ^ 0x00C0FFEEu);
     }
-
+ 
     {
         unsigned int mask = mix32(k ^ 0x0BADF00Du) & 0x0000FFFFu;
         unsigned int sig  = (tgt ^ mix32(tgt + 0xABCDEF01u)) & 0x0000FFFFu;
