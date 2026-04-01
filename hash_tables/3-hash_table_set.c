@@ -8,7 +8,7 @@
  * @value: the value
  * Return: Pointer to the node
  */
-hash_node_t *create_node(const char *key, const char *value)
+hash_node_t *add_node(const char *key, const char *value)
 {
 	hash_node_t *new;
 
@@ -61,7 +61,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		node = node->next;
 	}
-	new = create_node(key, value);
+	new = add_node(key, value);
 	if (!new)
 		return (0);
 	new->next = ht->array[idx];
