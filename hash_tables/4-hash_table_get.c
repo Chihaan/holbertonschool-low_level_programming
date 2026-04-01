@@ -3,7 +3,24 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
- * hash_table_create - Prints all the elements of the list
- * @size: pointer to the head of the list
+ * hash_table_get - Retrieve a value associated
+ * @ht: the hash table
+ * @key: the key
  * Return: size_t
  */
+char *hash_table_get(const hash_table_t *ht, const char *key)
+{
+	unsigned long int idx;
+	hash_node_t *node;
+
+	idx = key_index((unsigned char *)key, ht->size);
+	node = ht->array[idx];
+
+	while (node)
+	{
+		if (strcmp(node->key, key) == 0)
+			return (node->value);
+		node = node->next;
+	}
+	return (NULL);
+}
