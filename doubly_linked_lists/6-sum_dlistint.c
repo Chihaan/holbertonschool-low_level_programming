@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * sum_dlistint - Returns the sum of all the data (n) of a dlistint_t linked list.
+ * sum_dlistint - Returns the sum of all the data of inked list.
  * @head: pointer to the head of the list
  * Return: dlistint_t node
  */
@@ -23,4 +23,4 @@ int sum_dlistint(dlistint_t *head)
 		tmp = tmp->next;
 	}
 	return (sum);
-}	
+}
