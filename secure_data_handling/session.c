@@ -10,7 +10,10 @@ session_t *session_create(const char *id, unsigned int uid, const unsigned char 
 	if (!s)
 		return NULL;
 
-	s->id = (char *)id;
+	s->id = strdup(id);
+
+	if (!id)
+		return (0);
 
 	s->uid = uid;
 
@@ -65,6 +68,7 @@ void session_destroy(session_t *s)
 	if (!s)
 		return;
 
+	free(s->id);
 	free(s->data);
 	free(s);
 }
